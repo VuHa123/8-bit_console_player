@@ -7,7 +7,7 @@ pygame.init()
 pygame.font.init()
 WIDTH, HEIGHT = 750, 750
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Space Shooter Tutorial")
+pygame.display.set_caption("Space Shooter")
 #load imgae
 red_space_ship = pygame.image.load("SpaceShooterTutorial/assets/pixel_ship_red_small.png").convert()
 green_space_ship = pygame.image.load("SpaceShooterTutorial/assets/pixel_ship_green_small.png").convert()
