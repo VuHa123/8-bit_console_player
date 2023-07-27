@@ -9,18 +9,18 @@ WIDTH, HEIGHT = 750, 750
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Space Shooter")
 #load imgae
-red_space_ship = pygame.image.load("SpaceShooterTutorial/assets/pixel_ship_red_small.png").convert()
-green_space_ship = pygame.image.load("SpaceShooterTutorial/assets/pixel_ship_green_small.png").convert()
-blue_space_ship = pygame.image.load("SpaceShooterTutorial/assets/pixel_ship_blue_small.png").convert()
+red_space_ship = pygame.image.load("assets/pixel_ship_red_small.png").convert()
+green_space_ship = pygame.image.load("assets/pixel_ship_green_small.png").convert()
+blue_space_ship = pygame.image.load("assets/pixel_ship_blue_small.png").convert()
 #player player
-yellow_space_ship = pygame.image.load("SpaceShooterTutorial/assets/pixel_ship_yellow.png").convert()
+yellow_space_ship = pygame.image.load("assets/pixel_ship_yellow.png").convert()
 #lasers
-red_laser = pygame.image.load("SpaceShooterTutorial/assets/pixel_laser_red.png").convert()
-green_laser = pygame.image.load("SpaceShooterTutorial/assets/pixel_laser_green.png").convert()
-blue_laser = pygame.image.load("SpaceShooterTutorial/assets/pixel_laser_blue.png").convert()
-yellow_laser = pygame.image.load("SpaceShooterTutorial/assets/pixel_laser_yellow.png").convert()
+red_laser = pygame.image.load("assets/pixel_laser_red.png").convert()
+green_laser = pygame.image.load("assets/pixel_laser_green.png").convert()
+blue_laser = pygame.image.load("assets/pixel_laser_blue.png").convert()
+yellow_laser = pygame.image.load("assets/pixel_laser_yellow.png").convert()
 #load background
-bg = pygame.image.load("SpaceShooterTutorial/assets/background-black.png").convert()
+bg = pygame.image.load("assets/background-black.png").convert()
 bg = pygame.transform.scale(bg, (WIDTH, HEIGHT))
 
 class Laser:
@@ -65,7 +65,7 @@ class Ship:
                 self.lasers.remove(laser)
             elif laser.collision(obj):
                 obj.health -= 10
-                self.laser.remove(laser)
+                self.lasers.remove(laser)
     #hồi chiêu
     def cooldown(self):
         if self.cool_down_counter >= self.COOLDOWN:
@@ -148,8 +148,8 @@ def main():
     FPS = 60
     level = 0
     lives = 5
-    main_font = pygame.font.Font('04b_19/04B_19__.TTF', 40)
-    lost_font = pygame.font.Font('04b_19/04B_19__.TTF', 60)
+    main_font = pygame.font.Font('../04b_19/04B_19__.TTF', 40)
+    lost_font = pygame.font.Font('../04b_19/04B_19__.TTF', 60)
 
     enemies =[]
     wave_lenght = 5 # số lượng kẻ thù
