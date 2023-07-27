@@ -47,7 +47,7 @@ def bird_animation():
 #hien thi diem
 def score_display(game_state):
     if game_state == 'main game': #game dang chay chi hien thi diem 
-        score_surface = game_font.render(str(int(score)), True, (255, 255, 255))
+        score_surface = game_font.render(str(int(score)), True, (255, 255, 255))#tao anh chu
         score_rec = score_surface.get_rect(center=(216, 100))
         screen.blit(score_surface, score_rec)
     if game_state == 'game over': #game ket thuc se hien thi diem cuoi cung va diem cao nhat
